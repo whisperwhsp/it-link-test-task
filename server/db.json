@@ -1,13 +1,6 @@
 {
   "cars": [
     {
-      "name": "Title",
-      "description": "description",
-      "price": "200",
-      "contacts": "contacts@gmail.com",
-      "id": 1
-    },
-    {
       "name": "sdf",
       "description": "sdf",
       "price": "sdf",
