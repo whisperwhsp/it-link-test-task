@@ -69,7 +69,7 @@ const CarCard: React.FC<IProps> = ({ car }) => {
       <div className={`mt-5 ${styles['card-button']}`}>
         <Button
           variant='danger'
-          onClick={() => dispatch(removeCar(car.id))}
+          onClick={() => dispatch(removeCar(car.id.toString()))}
         >
           Удалить
         </Button>
