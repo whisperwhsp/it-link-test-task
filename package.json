@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "server": "json-server -w server/db.json -p 3001"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.0",

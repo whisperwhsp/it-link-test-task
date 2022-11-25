@@ -12,12 +12,12 @@ export interface ITechnicalChar {
 }
 
 export interface ICar {
-  id: number,
-  // images: FileList,
+  id: number | string,
+  images: string[],
   name: string,
   description: string,
-  price: number,
+  price: number | string,
   contacts: string,
-  technical_characteristics?: ITechnicalChar,
-  options?: IOption[],
+  technical_characteristics: ITechnicalChar | {},
+  options: IOption[] | [],
 }

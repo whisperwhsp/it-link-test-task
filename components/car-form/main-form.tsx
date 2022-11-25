@@ -5,10 +5,18 @@ import { ICar } from '../../models/ICar';
 
 interface IProps {
   control: Control<ICar>
-  handleBlur: React.FocusEventHandler<HTMLInputElement>
 }
 
 const MainForm: React.FC<IProps> = (props) => {
+  const addFileName = (e: React.ChangeEvent<HTMLInputElement>, fieldOnChange: (value: any) => void) => {
+    if (e.target && e.target.files) {
+      const arrNames = [];
+      for (let i = 0; i  < e.target.files.length; i += 1) {
+        arrNames.push(e.target.files[i].name);
+      }
+      fieldOnChange(arrNames)
+    }
+  }
   return (
     <>
       <Form.Group className="mb-3" controlId={'name'} >
@@ -16,8 +24,8 @@ const MainForm: React.FC<IProps> = (props) => {
         <Controller
           control={props.control}
           name={'name'}
-          defaultValue={''}
-          render={({ field }) => <Form.Control {...field} onBlur={props.handleBlur} />}
+          rules={{ required: true }}
+          render={({ field }) => <Form.Control {...field} />}
         />
       </Form.Group>
       <Form.Group className="mb-3" controlId='description'>
@@ -25,8 +33,8 @@ const MainForm: React.FC<IProps> = (props) => {
         <Controller
           control={props.control}
           name={'description'}
-          defaultValue={''}
-          render={({ field }) => <Form.Control {...field} onBlur={props.handleBlur} />}
+          rules={{ required: true }}
+          render={({ field }) => <Form.Control {...field} />}
         />
       </Form.Group>
       <Form.Group className="mb-3" controlId='price'>
@@ -34,8 +42,19 @@ const MainForm: React.FC<IProps> = (props) => {
         <Controller
           control={props.control}
           name={'price'}
-          defaultValue={''}
-          render={({ field }) => <Form.Control {...field} onBlur={props.handleBlur} />}
+          rules={{ required: true }}
+          render={({ field }) => <Form.Control {...field} />}
+        />
+      </Form.Group>
+      <Form.Group controlId='images'>
+        <Form.Label className='form-label'>Фото</Form.Label>
+        <Controller
+          control={props.control}
+          name={'images'}
+          rules={{ required: true }}
+          render={({ field }) => (
+            <input className='form-control' type="file" multiple onChange={(e) => addFileName(e, field.onChange)} />
+          )}
         />
       </Form.Group>
       <Form.Group className="mb-3" controlId='contacts'>
@@ -43,8 +62,8 @@ const MainForm: React.FC<IProps> = (props) => {
         <Controller
           control={props.control}
           name={'contacts'}
-          defaultValue={''}
-          render={({ field }) => <Form.Control {...field} onBlur={props.handleBlur} />}
+          rules={{ required: true }}
+          render={({ field }) => <Form.Control {...field} />}
         />
       </Form.Group>
     </>

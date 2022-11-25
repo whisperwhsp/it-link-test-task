@@ -1,22 +1,21 @@
 import React from 'react';
 import { Col, Form, Row } from 'react-bootstrap';
 import { Control, Controller, useForm } from 'react-hook-form';
-import { ICar } from '../../models/ICar';
+import { ICar, IOption } from '../../models/ICar';
 
 interface IProps {
   control: Control<ICar>,
-  index: number,
-  handleBlur: React.FocusEventHandler<HTMLInputElement>
+  name: `options.${number}.option_name`,
 }
 
 const Option: React.FC<IProps> = (props) => {
   return (
-    <Form.Group controlId={`options-${props.index}`}>
+    <Form.Group className='mb-3' controlId={props.name}>
       <Form.Label>Название опции</Form.Label>
       <Controller
         control={props.control}
-        name={`options.${props.index}.option_name`}
-        render={({ field }) => <Form.Control {...field} onBlur={props.handleBlur} />}
+        name={props.name}
+        render={({ field }) => <Form.Control {...field} />}
       />
     </Form.Group>
   )

@@ -1,11 +1,10 @@
 import React from 'react';
 import { Form } from 'react-bootstrap';
 import { Control, Controller } from 'react-hook-form';
-import { ICar } from '../../models/ICar';
+import { ICar, ITechnicalChar } from '../../models/ICar';
 
 interface IProps {
   control: Control<ICar>
-  handleBlur: React.FocusEventHandler<HTMLInputElement>
 }
 
 const TechnicalCharacteristics: React.FC<IProps> = (props) => {
@@ -16,8 +15,8 @@ const TechnicalCharacteristics: React.FC<IProps> = (props) => {
         <Controller
           control={props.control}
           name={'technical_characteristics.brand'}
-          defaultValue={''}
-          render={({ field }) => <Form.Control {...field} onBlur={props.handleBlur}/>}
+          rules={{ required: true }}
+          render={({ field }) => <Form.Control {...field}/>}
         />
       </Form.Group>
       <Form.Group className="mb-3" controlId={'technical_characteristics.model'}>
@@ -25,8 +24,8 @@ const TechnicalCharacteristics: React.FC<IProps> = (props) => {
         <Controller
           control={props.control}
           name={'technical_characteristics.model'}
-          defaultValue={''}
-          render={({ field }) => <Form.Control {...field} onBlur={props.handleBlur} />}
+          rules={{ required: true }}
+          render={({ field }) => <Form.Control {...field} />}
         />
       </Form.Group>
       <Form.Group className="mb-3" controlId={'technical_characteristics.productionYear'}>
@@ -34,8 +33,8 @@ const TechnicalCharacteristics: React.FC<IProps> = (props) => {
         <Controller
           control={props.control}
           name={'technical_characteristics.productionYear'}
-          defaultValue={''}
-          render={({ field }) => <Form.Control {...field} onBlur={props.handleBlur} />}
+          rules={{ required: true }}
+          render={({ field }) => <Form.Control {...field} />}
         />
       </Form.Group>
       <Form.Group className="mb-3" controlId={'technical_characteristics.body'}>
@@ -43,8 +42,8 @@ const TechnicalCharacteristics: React.FC<IProps> = (props) => {
         <Controller
           control={props.control}
           name={'technical_characteristics.body'}
-          defaultValue={''}
-          render={({ field }) => <Form.Control {...field} onBlur={props.handleBlur} />}
+          rules={{ required: true }}
+          render={({ field }) => <Form.Control {...field} />}
         />
       </Form.Group>
       <Form.Group className="mb-3" controlId={'technical_characteristics.mileage'}>
@@ -52,8 +51,8 @@ const TechnicalCharacteristics: React.FC<IProps> = (props) => {
         <Controller
           control={props.control}
           name={'technical_characteristics.mileage'}
-          defaultValue={''}
-          render={({ field }) => <Form.Control {...field} onBlur={props.handleBlur} />}
+          rules={{ required: true }}
+          render={({ field }) => <Form.Control {...field} />}
         />
       </Form.Group>
     </>

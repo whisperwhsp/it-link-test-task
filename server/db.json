@@ -1,0 +1,91 @@
+{
+  "cars": [
+    {
+      "name": "Title",
+      "description": "description",
+      "price": "200",
+      "contacts": "contacts@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "sdf",
+      "description": "sdf",
+      "price": "sdf",
+      "contacts": "sdf",
+      "technical_characteristics": {
+        "brand": "dsf",
+        "model": "sdf",
+        "productionYear": "sdf",
+        "body": "sdf",
+        "mileage": "sdf"
+      },
+      "options": [
+        {
+          "option_name": "sdf"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Volvo XC70, 2007",
+      "description": "1973 года выпуска, в отличном состоянии. Пробег 200000 км.",
+      "price": "1500000",
+      "contacts": "seller@mail.ru",
+      "technical_characteristics": {
+        "brand": "Volvo",
+        "model": "XC70",
+        "productionYear": "2007",
+        "body": "body",
+        "mileage": "200000"
+      },
+      "options": [
+        {
+          "option_name": "Климат-контроль"
+        },
+        {
+          "option_name": "Центральный замок"
+        },
+        {
+          "option_name": "Вентилятор"
+        }
+      ]
+    },
+    {
+      "name": "asd",
+      "description": "asd",
+      "price": "10000",
+      "technical_characteristics": {
+        "brand": "Lada",
+        "model": "2012",
+        "productionYear": "2000",
+        "body": "body",
+        "mileage": "100000"
+      },
+      "options": [],
+      "id": 4
+    },
+    {
+      "name": "asd",
+      "description": "asd",
+      "price": "profile settings (2).png",
+      "technical_characteristics": {},
+      "options": [],
+      "id": 9
+    },
+    {
+      "id": 10,
+      "name": "asdsad",
+      "description": "asd",
+      "price": "asd",
+      "contacts": "asd",
+      "technical_characteristics": {},
+      "options": [],
+      "images": [
+        "support page (1).png",
+        "support page.png",
+        "profile settings.png"
+      ]
+    }
+  ]
+}
